@@ -6,7 +6,7 @@ import img3 from "../assets/images/project-img3.png";
 import "../styles.css";
 import ProjectCard from "./ProjectCard";
 
-function Projects() {
+const Projects = () => {
   const [durum, setDurum] = useState(1);
 
   const projects = [

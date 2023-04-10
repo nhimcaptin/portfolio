@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../assets/images/contact-img.svg";
 
-function Contact() {
+const Contact = () => {
   return (
     <>
       <div className="contact bg-[linear-gradient(90deg,#b004b0,#38097a);] w-full">

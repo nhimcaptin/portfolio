@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import "../styles.css";
 
-function Navbar() {
+const Navbar = () => {
   const [durum, setDurum] = useState(true);
   console.log(durum);
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProjectCard({item}) {
+const ProjectCard = ({item}) => {
   return (
     <>
       <div className="img-box w-[450px] lg2:w-auto mx-auto flex justify-center items-center relative overflow-hidden rounded-3xl">

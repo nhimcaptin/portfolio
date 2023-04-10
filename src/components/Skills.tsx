@@ -8,7 +8,7 @@ import { Pagination } from "swiper";
 import img from "../assets/images/meter1.svg";
 import bg from "../assets/images/banner-bg.png"
 
-function Skills() {
+const Skills = () => {
   return (
     <>
       <div id="skills" style={{backgroundImage: `url(${bg})`}} className="wrapper h-full bg-no-repeat bg-center bg-cover p-16 lg:p-4">

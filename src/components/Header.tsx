@@ -5,7 +5,7 @@ import bg from "../assets/images/bg.jpg"
 import Navbar from './Navbar'
 import "../styles.css"
 
-function Header() {
+const Header = () => {
   return (
    <>
    <div id='home' style={{backgroundImage: `url(${bg})`}} className=' bg-center bg-cover bg-no-repeat h-screen flex flex-col '>
@@ -17,7 +17,7 @@ function Header() {
         </div>
         <h1 className='text-white text-5xl font-bold'>Hi! I'm Burak</h1>
         <p className='text-white py-4 max-w-lg '>Lorem ipsum dolor sit amet consectetur  adipisicing elit. In qui impedit  sunt, est molestiae ullam. Saepe voluptatum ducimus adipisci pariatur. adipisicing elit.  In qui impedit ipsum dolor sit amet consectetur</p>
-        <button className='  text-white text-2xl'>Let's Connect <i className="fa-solid fa-arrow-right text-lg  p-[2px] "></i> </button>
+        {/* <button className='  text-white text-2xl'>Let's Connect <i className="fa-solid fa-arrow-right text-lg  p-[2px] "></i> </button> */}
       </div>
       <div className="image banner-astronout lg:hidden absolute w-[300px] flex ">
       <img className='w-96 ast-img' src={logo1} alt="" />
