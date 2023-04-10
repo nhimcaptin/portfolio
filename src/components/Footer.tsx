@@ -1,6 +1,7 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = (props: any) => {
+  const { data } = props;
   return (
     <>
       <div className="footer bg-[#171717]">

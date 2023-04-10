@@ -11,11 +11,11 @@ const Home = () => {
   console.log("data", data);
   return (
     <>
-      <Header />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Header data={data?.body?.data[0]} />
+      <Skills data={data?.body?.data[0]} />
+      <Projects data={data?.body?.data[0]} />
+      <Contact data={data?.body?.data[0]} />
+      <Footer data={data?.body?.data[0]} />
     </>
   );
 };

@@ -2,16 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    /* color: white; */
+body {
+  /* color: white; */
 }
 
-html,body{
-    overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
+}
+.circle {
+  fill: #000;
 }
