@@ -1,7 +1,4 @@
 import React from "react";
-import logo from "../assets/images/astronout.png";
-import logo1 from "../assets/images/astronout1.png";
-import bg from "../assets/images/bg.jpg";
 import Navbar from "./Navbar";
 import "../styles.css";
 
@@ -11,10 +8,10 @@ const Header = (props: any) => {
     <>
       <div
         id="home"
-        style={{ backgroundImage: `url(${bg})` }}
+        style={{ backgroundImage: `url(src/assets/images/bg.jpg)` }}
         className=" bg-center bg-cover bg-no-repeat h-screen flex flex-col "
       >
-        <Navbar />
+        <Navbar data={data} />
         <div className="wrapper flex justify-between items-center h-screen w-full px-20 lg:justify-center lg:px-6">
           <div className="content lg:text-center">
             <div className="btn py-3">
@@ -29,10 +26,18 @@ const Header = (props: any) => {
             {/* <button className='  text-white text-2xl'>Let's Connect <i className="fa-solid fa-arrow-right text-lg  p-[2px] "></i> </button> */}
           </div>
           <div className="image banner-astronout lg:hidden absolute w-[300px] flex ">
-            <img className="w-96 ast-img" src={logo1} alt="" />
+            <img
+              className="w-96 ast-img"
+              src="src/assets/images/astronout1.png"
+              alt=""
+            />
           </div>
           <div className="image banner-astronout1 lg:hidden absolute w-[300px] flex ">
-            <img className="w-96 ast-img" src={logo} alt="" />
+            <img
+              className="w-96 ast-img"
+              src="src/assets/images/astronout.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

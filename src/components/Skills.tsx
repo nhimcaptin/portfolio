@@ -5,8 +5,6 @@ import "swiper/css/navigation";
 import "../styles.css";
 import { Navigation } from "swiper";
 import { Pagination } from "swiper";
-import img from "../assets/images/meter1.svg";
-import bg from "../assets/images/banner-bg.png";
 
 const Skills = (props: any) => {
   const { data } = props;
@@ -14,7 +12,7 @@ const Skills = (props: any) => {
     <>
       <div
         id="skills"
-        style={{ backgroundImage: `url(${bg})` }}
+        style={{ backgroundImage: `url(src/assets/images/banner-bg.png)` }}
         className="wrapper h-full bg-no-repeat bg-center bg-cover p-16 lg:p-4"
       >
         <div className="skills-wrapper text-center text-white bg-[#171717]  p-10 rounded-[50px] lg:p-2">

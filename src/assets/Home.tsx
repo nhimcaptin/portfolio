@@ -8,6 +8,7 @@ import { useGetPostsQuery } from "../store/index.service";
 
 const Home = () => {
   const { data, isFetching, isLoading } = useGetPostsQuery();
+  console.log("useGetPostsQuery", useGetPostsQuery())
   console.log("data", data);
   return (
     <>

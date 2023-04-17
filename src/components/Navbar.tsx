@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import "../styles.css";
 
-const Navbar = () => {
+const Navbar = (props: any) => {
+  const { data } = props;
   const [durum, setDurum] = useState(true);
   console.log(durum);
 
@@ -15,18 +16,26 @@ const Navbar = () => {
       document.body.scrollTop > 80 ||
       document.documentElement.scrollTop > 80
     ) {
-      document.querySelector(".navbarcon").style.backgroundColor = "#171717";
+      const navbar = document.querySelector(".navbarcon");
+      if (navbar) {
+        navbar.style.backgroundColor = "#171717";
+      }
     } else {
-      document.querySelector(".navbarcon").style.backgroundColor =
-        "rgba(0, 0, 0, 0)";
-      document.querySelector(".tl").style.backgroundColor = "rgba(0, 0, 0, 0)";
+      if (document.querySelector(".navbarcon")) {
+        document.querySelector(".navbarcon").style.backgroundColor =
+          "rgba(0, 0, 0, 0)";
+      }
+      if (document.querySelector(".tl")) {
+        document.querySelector(".tl").style.backgroundColor =
+          "rgba(0, 0, 0, 0)";
+      }
     }
   }
 
   return (
     <>
       <div className="navbarcon flex justify-between items-center px-20 py-6 bg-transparent z-40 text-white lg:px-6 fixed w-full">
-        <h1 className="text-4xl  font-bold ">Reayhs</h1>
+        <h1 className="text-4xl  font-bold ">Portfolio</h1>
 
         <nav
           className={` flex justify-center items-center gap-x-10 ${
@@ -46,24 +55,24 @@ const Navbar = () => {
           </ul>
 
           <div className="icon text-lg flex gap-4  lg:gap-8 lg:my-10">
-            <a href="https://twitter.com/reayhs" target="_blank">
+            <a href={data?.socialNetwork.facebook} target="_blank">
               <i className="fa-brands fa-twitter border-[1px] border-white p-2 rounded-[100%] hover:bg-white hover:text-black"></i>
             </a>
 
-            <a href="https://www.instagram.com/iburakz/" target="_blank">
+            <a href={data?.socialNetwork.facebook} target="_blank">
               <i className="fa-brands fa-instagram border-[1px] border-white p-2 rounded-[100%] hover:bg-white hover:text-black"></i>
             </a>
-            <a
-              href="https://github.com/Reayhs/react-tailwind-portfolio"
-              target="_blank"
-            >
+            <a href={data?.socialNetwork.GitHub} target="_blank">
               <i className="fa-brands fa-github border-[1px] border-white p-2 rounded-[100%] hover:bg-white hover:text-black"></i>
             </a>
           </div>
           <div className="btn">
-            <button className="border-[1px] border-white border-solid py-2 px-4 hover:bg-white hover:text-black font-bold">
+            <AnchorLink
+              href="#contacts"
+              className="border-[1px] border-white border-solid py-2 px-4 hover:bg-white hover:text-black font-bold"
+            >
               Let's Connect
-            </button>
+            </AnchorLink>
           </div>
         </nav>
         <i
@@ -73,6 +82,6 @@ const Navbar = () => {
       </div>
     </>
   );
-}
+};
 
 export default Navbar;
